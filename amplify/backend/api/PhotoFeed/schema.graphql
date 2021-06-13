@@ -1,0 +1,32 @@
+type TimeLineFeed @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  description: String
+  postedAt: AWSDateTime
+  content: Content @connection
+  user: User @connection
+  comment: [Comment] @connection(keyName: "byTimeLineFeed", fields: ["id"])
+}
+
+type Comment @model @auth(rules: [{allow: public}]) @key(name: "byTimeLineFeed", fields: ["timelinefeedID"]) {
+  id: ID!
+  body: String
+  timelinefeedID: ID
+  user: User @connection
+}
+
+type User @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  username: String
+  profilePic: String
+}
+
+type Content @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  source: String
+  type: ContentType
+}
+
+enum ContentType {
+  IMAGE
+  VIDEO
+}

@@ -1,0 +1,15 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-photofeed-staging-14354-authRole",
+      "UnauthRoleArn": "arn:aws:iam::020423773531:role/amplify-photofeed-staging-14354-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::020423773531:role/amplify-photofeed-staging-14354-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-photofeed-staging-14354-deployment",
+      "UnauthRoleName": "amplify-photofeed-staging-14354-unauthRole",
+      "StackName": "amplify-photofeed-staging-14354",
+      "StackId": "arn:aws:cloudformation:us-east-1:020423773531:stack/amplify-photofeed-staging-14354/d0322310-cbe8-11eb-b499-120346a4bf23",
+      "AmplifyAppId": "d1hfma58sr64a4"
+    }
+  }
+}
